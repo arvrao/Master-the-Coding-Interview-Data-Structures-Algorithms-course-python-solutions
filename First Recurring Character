@@ -1,0 +1,17 @@
+Find the first recurring character or number in a given list:
+
+We can leverage dictionaries concept.
+Create empty dictionary, iterate through the list, check condition if given character exists as key, then return the character. Else if it doesn't exist, 
+then initialize the value as 0.
+def recurlst(lst):
+    d = {}
+    for num in lst:
+        if num in d:
+            return num
+        
+        else:
+            d[num] = 0
+    return '\0'
+
+lst = [1,2,3,4,5,2]
+print(recurlst(lst))
